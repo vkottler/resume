@@ -8,3 +8,7 @@ Maintaining my LaTeX resume.
     </embed>
 </object>
 
+![Resume](https://github.com/vkottler/resume/blob/master/main.pdf)
+
+![Resume Again](main.pdf)
+
