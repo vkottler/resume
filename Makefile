@@ -1,4 +1,4 @@
-.PHONY: pdf png clean
+.PHONY: pdf png clean all
 .DEFAULT_GOAL := pdf
 
 PROJECT=main
@@ -25,7 +25,8 @@ $(PROJECT).pdf: $(PROJECT).tex
 
 pdf: $(PROJECT).pdf
 png: $(PROJECT).png
+all: pdf png
 
 clean:
-	rm -f *.log *.aux *.dvi *.pdf *.out
+	rm -f *.log *.aux *.dvi $(PROJECT).pdf $(PROJECT).png *.out
 
