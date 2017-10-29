@@ -2,5 +2,5 @@
 
 Maintaining my LaTeX resume.
 
-[Resume](main.png)
+![Resume](main.png)
 
