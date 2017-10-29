@@ -3,41 +3,38 @@
 % Vaughn Kottler                                                               %
 %     Undergraduate CE & CS Student | University of Wisconsin-Madison          %
 %                                                                              %
-% Last Updated: 10/24/2017                                                     %
+% Last Updated: 10/28/2017                                                     %
 %                                                                              %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Global \ Boilerplate
 \documentclass[letterpaper,10pt]{article}
-\usepackage[utf8]{inputenc}
 
-% Metadata
-\title{resume}
-\author{Vaughn Kottler}
-
-% Font Selection
-%\usepackage{courier}
-\usepackage[default]{sourcecodepro}
+\usepackage[utf8]{inputenc}			% Boilerplate
+\usepackage[default]{sourcecodepro}	% Font
 \usepackage[T1]{fontenc}
-
-% Hyperlinks
-\usepackage{hyperref}
-
-% Colors
-\usepackage{color}
-\definecolor{maroon}{RGB}{152, 0, 0}
-
-% Margins
-\addtolength{\topmargin}{-1.0in}
+\usepackage[hidelinks]{hyperref}	% Hyperlinks
+\usepackage{graphicx}				% Images
+\usepackage{color}					% Colors
+\usepackage{fancyhdr}				% Header & Footer
+\addtolength{\topmargin}{-1.0in}	% Margins
 \addtolength{\oddsidemargin}{-1.5in}
 \addtolength{\evensidemargin}{-1.5in}
 \addtolength{\textwidth}{3.0in}
 \addtolength{\textheight}{2.0in}
 
+\usepackage{changepage}
+
+% Metadata
+\title{resume}
+\author{Vaughn Kottler}
+
+% Custom colors
+\definecolor{maroon}{RGB}{152, 0, 0}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                               Header and Footer                              %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
 
@@ -53,8 +50,10 @@
 \renewcommand{\headrulewidth}{0pt}
 
 % Bottom header(s)
-\rfoot{\small
-    Made from scratch with {\color{maroon}\LaTeX{}}
+\rfoot{\footnotesize
+    Made {\color{blue}\underline{%
+			\href{https://github.com/vkottler/resume}{from scratch}%
+	}} with {\color{maroon}\LaTeX{}} (\textit{\today})
 }
 \lfoot{\footnotesize
     \textbf{YouTube tutorials:}
@@ -71,7 +70,7 @@
 
 % Name
 \begin{center}\Huge
-    Vaughn Kottler
+    \includegraphics{terminal.png} Vaughn Kottler \includegraphics{circuit.png}
 \end{center}
 
 % Tagline
@@ -79,46 +78,71 @@
     \color{maroon}\textbf{
         Embedded Systems Engineering \& Mechatronics, Full Stack Web Development \& IoT
     }
-    
-\end{center}
+\end{center}%
 
-\section*{\underline{Education:}}
+\noindent
+\textbf{Education:}\hspace{2.6em}Sample Content
+\begin{adjustwidth}{1.2in}{0in}
+TODO\break
+TODO\break
+TODO\break
+\end{adjustwidth}
 
+\noindent
+\textbf{Work:}\hspace{5.6em}Sample Content
+\begin{adjustwidth}{1.2in}{0in}
+TODO\break
+TODO\break
 TODO
+\end{adjustwidth}
 
-\section*{Work}
-
-TODO
-
-% Horizontal rule
 \begin{center}
-\noindent\rule{7.5in}{0.5pt}
+\noindent\rule{7.75in}{0.5pt}
 \end{center}
 
-\section*{\underline{Skills (CE):}}
+\noindent
+\textbf{Skills (CE):}\hspace{1.4em}Sample Content
+\begin{adjustwidth}{1.2in}{0in}
+TODO\break
+TODO\break
+TODO\break
+\end{adjustwidth}
 
+\noindent
+\textbf{Skills (CS):}\hspace{1.4em}Sample Content
+\begin{adjustwidth}{1.2in}{0in}
+TODO\break
+TODO\break
+TODO\break
+\end{adjustwidth}
+
+\noindent
+\textbf{Leadership:}\hspace{2em}Sample Content
+\begin{adjustwidth}{1.2in}{0in}
+TODO\break
+TODO\break
 TODO
+\end{adjustwidth}
 
-\section*{\underline{Skills (CS):}}
-
-TODO
-
-\section*{\underline{Leadership:}}
-
-TODO
-
-% Horizontal rule
 \begin{center}
-\noindent\rule{7.5in}{0.5pt}
+\noindent\rule{7.75in}{0.5pt}
 \end{center}
 
-\section*{\underline{Involvement:}}
+\noindent
+\textbf{Involvement:}\hspace{1.35em}Sample Content
+\begin{adjustwidth}{1.2in}{0in}
+TODO\break
+TODO\break
+TODO\break
+\end{adjustwidth}
 
+\noindent
+\textbf{Awards:}\hspace{4.4em}Sample Content
+\begin{adjustwidth}{1.2in}{0in}
+TODO\break
+TODO\break
 TODO
-
-\section*{\underline{Awards:}}
-
-TODO
+\end{adjustwidth}
 
 \end{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
