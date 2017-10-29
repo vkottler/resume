@@ -16,14 +16,15 @@
 \usepackage[hidelinks]{hyperref}	% Hyperlinks
 \usepackage{graphicx}				% Images
 \usepackage{color}					% Colors
+\usepackage{changepage}				% Vertical align blocks
+\usepackage[document]{ragged2e}		% Left-align text
+\usepackage{setspace}				% Custom line-spacing
 \usepackage{fancyhdr}				% Header & Footer
 \addtolength{\topmargin}{-1.0in}	% Margins
 \addtolength{\oddsidemargin}{-1.5in}
 \addtolength{\evensidemargin}{-1.5in}
 \addtolength{\textwidth}{3.0in}
 \addtolength{\textheight}{2.0in}
-
-\usepackage{changepage}
 
 % Metadata
 \title{resume}
@@ -49,6 +50,9 @@
 % Get rid of header horizontal rule
 \renewcommand{\headrulewidth}{0pt}
 
+% Reduce distance between header and text
+\setlength{\headsep}{0.15in}
+
 % Bottom header(s)
 \rfoot{\footnotesize
     Made {\color{blue}\underline{%
@@ -70,7 +74,9 @@
 
 % Name
 \begin{center}\Huge
-    \includegraphics[natwidth=150,natheight=25]{terminal.png} Vaughn Kottler \includegraphics[natwidth=150,natheight=25]{circuit.png}
+	\includegraphics[natwidth=150,natheight=25]{terminal.png}
+	Vaughn Kottler
+	\includegraphics[natwidth=150,natheight=25]{circuit.png}
 \end{center}
 
 % Tagline
@@ -81,68 +87,148 @@
 \end{center}%
 
 \noindent
-\textbf{Education:}\hspace{2.6em}Sample Content
-\begin{adjustwidth}{1.2in}{0in}
-TODO\break
-TODO\break
-TODO\break
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                 Education                                    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{\underline{Education:}}\hspace{2.6em}%
+%
+\textbf{UW-Madison}
+(Dean's List 5/6 Semesters, Summer 2016)
+\textit{GPA: 3.49}
+%
+\begin{adjustwidth}{1.2in}{0in}\setstretch{1.25}
+	Majors: Computer Engineering (Degree Program), Computer Science\break
+	Graduating: \textbf{May 2019} (3 semesters remaining)\break
 \end{adjustwidth}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \noindent
-\textbf{Work:}\hspace{5.6em}Sample Content
-\begin{adjustwidth}{1.2in}{0in}
-TODO\break
-TODO\break
-TODO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                 Work Experience                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{\underline{Work:}}\hspace{5.6em}%
+%
+\textbf{SpaceX}
+({\color{blue}\underline{\smash{%
+	\href{http://www.spacex.com/careers/position/210803}%
+	{Software Engineering Intern}%
+}}})
+\textit{Current}
+%
+\begin{adjustwidth}{1.2in}{0in}\setstretch{1.25}
+	- Content
+	\break
+	\textbf{Extreme Engineering Solutions}
+	({\color{blue}\underline{\smash{Associate Embedded Engineer}}})
+	\textit{Spring - Fall 2017}
+	\break
+	- Content
+	\break
+	\textbf{State Farm}
+	({\color{blue}\underline{\smash{Software Development Intern}}})
+	\textit{Summer 2016}
+	\break
+	- Content
+	\break
+	\textbf{UW-Madison College of Engineering}
+	({\color{blue}\underline{\smash{ULC Campus Tutor}}})
+	\textit{Fall 2016 - Present}
+	\break
+	- Content
+	\break
+	\textbf{UW Plasma Physics}
+	(Student Hourly, Computing)
+	\textit{Spring 2015 - Spring 2016}
 \end{adjustwidth}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{center}
-\noindent\rule{7.75in}{0.5pt}
-\end{center}
+% Horizontal Rule
+{\centering\noindent\rule{7.75in}{0.5pt}}\break
 
 \noindent
-\textbf{Skills (CE):}\hspace{1.4em}Sample Content
-\begin{adjustwidth}{1.2in}{0in}
-TODO\break
-TODO\break
-TODO\break
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                  Skills (CE)                                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{\underline{Skills (CE):}}\hspace{1.4em}%
+%
+Sample Content
+%
+\begin{adjustwidth}{1.2in}{0in}\setstretch{1.25}
+	TODO\break
+	TODO\break
+	TODO\break
 \end{adjustwidth}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \noindent
-\textbf{Skills (CS):}\hspace{1.4em}Sample Content
-\begin{adjustwidth}{1.2in}{0in}
-TODO\break
-TODO\break
-TODO\break
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                  Skills (CS)                                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{\underline{Skills (CS):}}\hspace{1.4em}%
+%
+Sample Content
+%
+\begin{adjustwidth}{1.2in}{0in}\setstretch{1.25}
+	TODO\break
+	TODO\break
+	TODO\break
 \end{adjustwidth}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \noindent
-\textbf{Leadership:}\hspace{2em}Sample Content
-\begin{adjustwidth}{1.2in}{0in}
-TODO\break
-TODO\break
-TODO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                  Leadership                                  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{\underline{Leadership:}}\hspace{2em}%
+%
+Sample Content
+%
+\begin{adjustwidth}{1.2in}{0in}\setstretch{1.25}
+	TODO\break
+	TODO\break
+	TODO
 \end{adjustwidth}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{center}
-\noindent\rule{7.75in}{0.5pt}
-\end{center}
+% Horizontal Rule
+{\centering\noindent\rule{7.75in}{0.5pt}}\break
 
 \noindent
-\textbf{Involvement:}\hspace{1.35em}Sample Content
-\begin{adjustwidth}{1.2in}{0in}
-TODO\break
-TODO\break
-TODO\break
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                  Involvement                                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{\underline{Involvement:}}\hspace{1.35em}%
+%
+Sample Content
+%
+\begin{adjustwidth}{1.2in}{0in}\setstretch{1.25}
+	TODO\break
+	TODO\break
+	TODO\break
 \end{adjustwidth}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \noindent
-\textbf{Awards:}\hspace{4.4em}Sample Content
-\begin{adjustwidth}{1.2in}{0in}
-TODO\break
-TODO\break
-TODO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   Awards                                     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{\underline{Awards:}}\hspace{4.4em}%
+%
+Sample Content
+%
+\begin{adjustwidth}{1.2in}{0in}\setstretch{1.25}
+	TODO\break
+	TODO\break
+	TODO
 \end{adjustwidth}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \end{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
