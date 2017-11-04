@@ -42,7 +42,7 @@ $(PROJECT).png: $(PROJECT).dvi $(subsections)
 	@dvipng $< -o $@
 
 png: $(PROJECT).png
-	@$(PNGVIEWER) $@ $(NO_CAP_SHELL)
+	@$(PNGVIEWER) $< $(NO_CAP_SHELL)
 
 $(PROJECT).pdf: $(PROJECT).tex $(subsections)
 	+@echo "Generating $@ . . ."
