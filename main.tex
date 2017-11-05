@@ -27,6 +27,8 @@
 \addtolength{\textwidth}{3.0in}
 \addtolength{\textheight}{2.25in}
 
+\usepackage{tikzpagenodes}
+
 % Metadata
 \title{resume}
 \author{Vaughn Kottler}
@@ -91,6 +93,11 @@
 \rfoot{\footnotesize
     Made \HREF{https://github.com/vkottler/resume}{from scratch}
 	with {\color{maroon}\LaTeX{}} (\textit{\today})
+	\begin{tikzpicture}[remember picture,overlay]
+	\node[anchor=south east,yshift=7.5mm,xshift=-1.5cm]{
+		\includegraphics[width=3cm]{im/gear_cropped.jpg}
+	};
+	\end{tikzpicture}
 }
 \lfoot{\footnotesize
     \textbf{YouTube tutorials:}
@@ -103,7 +110,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                              Document Content                               %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{document}
+\begin{document}%
 \subfile{sections/name}\noindent
 \subfile{sections/education}\noindent
 \subfile{sections/work}\noindent
