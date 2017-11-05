@@ -27,7 +27,9 @@
 \addtolength{\textwidth}{3.0in}
 \addtolength{\textheight}{2.25in}
 
-\usepackage{tikzpagenodes}
+\usepackage[absolute,overlay]{textpos}
+\setlength{\TPHorizModule}{1in} % horizontal unit
+\setlength{\TPVertModule}{1in} % vertical unit
 
 % Metadata
 \title{resume}
@@ -100,11 +102,6 @@
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\begin{tikzpicture}[remember picture,overlay]
-%\node[anchor=south east,yshift=7.5mm,xshift=-1.5cm]{
-%	\includegraphics[natwidth=150px,natheight=150px,width=3cm]{im/gear_cropped.jpg}
-%};
-%\end{tikzpicture}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -120,9 +117,12 @@
 \subfile{sections/skills_cs}\noindent
 %\subfile{sections/leadership}\noindent
 \HR
-
+%
+\begin{textblock}{1.25}(6.5,9.3)
+\includegraphics[width=1.25in,natwidth=100,natheight=100]{im/gear_cropped.jpg}
+\end{textblock}
 \subfile{sections/involvement}\noindent
-\subfile{sections/awards}\noindent
+\subfile{sections/awards}
 \end{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
