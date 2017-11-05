@@ -1,11 +1,11 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                                                                              %
-% Vaughn Kottler                                                               %
-%     Undergraduate CE & CS Student | University of Wisconsin-Madison          %
-%                                                                              %
-% Last Updated: 10/29/2017                                                     %
-%                                                                              %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                             %
+% Vaughn Kottler                                                              %
+%     Undergraduate CE & CS Student | University of Wisconsin-Madison         %
+%                                                                             %
+% Last Updated: 10/29/2017                                                    %
+%                                                                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Globals & Packages
 \documentclass[letterpaper,10pt]{article}
@@ -25,7 +25,7 @@
 \addtolength{\oddsidemargin}{-1.5in}
 \addtolength{\evensidemargin}{-1.5in}
 \addtolength{\textwidth}{3.0in}
-\addtolength{\textheight}{2.0in}
+\addtolength{\textheight}{2.25in}
 
 % Metadata
 \title{resume}
@@ -34,18 +34,50 @@
 % Custom colors
 \definecolor{maroon}{RGB}{152, 0, 0}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                               Header and Footer                              %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                               Custom commands                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Horizontal rule
+\newcommand{\HR}{{\centering\noindent\rule{7.75in}{0.5pt}}\break}
+
+% Link styling: blue and underlined
+\newcommand{\LINK}[1]{{\color{blue}\underline{\url{#1}}}}
+
+% Link reference styling: blue, underlined with underline close to text
+\newcommand{\HREF}[2]{{\color{blue}\underline{\smash{\href{#1}{#2}}}}}
+
+% Section formatting helpers, removes a lot of boilerplate
+\newcommand{\SECTHEAD}[3][maroon]{{\color{#1}\textbf{#2:}}\ \textit{#3}}
+\newcommand{\ALTHEAD}[3]{\textbf{#1} (#2) \textit{#3}}
+
+\newcommand{\SECTCONTNOBRK}[1]{{\small - #1}}
+\newcommand{\SECTCONT}[1]{\SECTCONTNOBRK{#1}\break}
+\newcommand{\SECTC}[3]{\SECTHEAD{#1}{#2}\break\SECTCONT{#3}}
+\newcommand{\SECTCNOBRK}[3]{\SECTHEAD{#1}{#2}\break\SECTCONTNOBRK{#3}}
+\newcommand{\SECTSTART}[2]{\underline{#1:}\hspace{#2}}
+\newcommand{\SECT}[5]{\SECTSTART{#1}{#2}\SECTHEAD{#3}{#4}#5}
+\newcommand{\ALTSECT}[6]{\SECTSTART{#1}{#2}\ALTHEAD{#3}{#4}{#5}#6}
+
+% Work-section specific
+\newcommand{\WORK}[4]{\ALTHEAD{#1}{#2}{#3}\break\SECTCONT{#4}}
+\newcommand{\WORKNOBRK}[4]{\ALTHEAD{#1}{#2}{#3}\break\SECTCONTNOBRK{#4}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                               Header and Footer                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \pagestyle{fancy}
 \fancyhf{}
 
 % Top header
 \chead{\footnotesize
     \textbf{Cell:} (608) 381-1145 $\vert$
-    \textbf{Email:} {\color{blue}\underline{\url{vkottler@wisc.edu}}} $\vert$
-    \textbf{Website:} {\color{blue}\underline{\url{vaughnsplayground.me}}} $\vert$
-    \textbf{GitHub:} {\color{blue}\underline{\url{www.github.com/vkottler}}}
+    \textbf{Email:} \LINK{vkottler@wisc.edu} $\vert$
+    \textbf{Website:} \LINK{vaughnsplayground.me} $\vert$
+    \textbf{GitHub:} \LINK{www.github.com/vkottler}
 }
 
 % Get rid of header horizontal rule
@@ -53,43 +85,37 @@
 
 % Reduce distance between header and text
 \setlength{\headsep}{0.15in}
+\setlength{\footskip}{0.4in}
 
 % Bottom header(s)
 \rfoot{\footnotesize
-    Made {\color{blue}\underline{%
-			\href{https://github.com/vkottler/resume}{from scratch}%
-	}} with {\color{maroon}\LaTeX{}} (\textit{\today})
+    Made \HREF{https://github.com/vkottler/resume}{from scratch}
+	with {\color{maroon}\LaTeX{}} (\textit{\today})
 }
 \lfoot{\footnotesize
     \textbf{YouTube tutorials:}
-    \color{blue}\underline{\url{https://www.youtube.com/user/VEVOemployee}}
+	\LINK{https://www.youtube.com/user/VEVOemployee}
 }
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                               Document Content                               %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                              Document Content                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 \subfile{sections/name}\noindent
 \subfile{sections/education}\noindent
 \subfile{sections/work}\noindent
-
-% Horizontal Rule
-{\centering\noindent\rule{7.75in}{0.5pt}}\break
+\HR
 
 \subfile{sections/skills_ce}\noindent
 \subfile{sections/skills_cs}\noindent
-\subfile{sections/leadership}\noindent
-
-% Horizontal Rule
-{\centering\noindent\rule{7.75in}{0.5pt}}\break
+%\subfile{sections/leadership}\noindent
+\HR
 
 \subfile{sections/involvement}\noindent
 \subfile{sections/awards}\noindent
-
 \end{document}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

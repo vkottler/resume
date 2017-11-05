@@ -1,13 +1,30 @@
 \documentclass[../main.tex]{subfiles}%
-\textbf{\underline{Skills (CS):}}\hspace{1.4em}%
 %
-{\color{maroon}\textbf{%
-	Sample Content:\
-}}\textit{More Content}
+\SECT{Skills (CS)}{1.4em}
+{Web Development (Full Stack)}
+{Responsiveness, Scalability, CI}
 %
-\begin{adjustwidth}{1.2in}{0in}\setstretch{1.25}
-	{\small - TODO}\break
-	{\color{maroon}\textbf{Sample Again:}}\
-	\textit{Content}\break
-	{\small - TODO}\break
-\end{adjustwidth}
+{\begin{adjustwidth}{1.2in}{0in}\setstretch{1.25}
+	%
+	\SECTCONT{Java EE, JavaScript/Node.js, PHP, SQL, HTML \& CSS, Go}
+	\SECTCONT{Frameworks: Spring, Angular [+Material], Bootstrap,
+		none / from scratch}
+	%
+	\SECTC{DBMS \& System Administration}
+		{Ubuntu, CentOS/RHEL, [De$\vert$Rasp]bian, Windows Server}
+		{Vagrant, Ansible, Docker \& Bash script automation, mailing configs}
+	\SECTCONT{Apache/NGINX configs (mult.\ vhosts),
+		DNS with SSL administration}
+	\SECTCONT{[My$\vert$Postgre]SQL, MongoDB, CouchDB, Redis
+		(as user and admin.)}
+	%
+	\SECTC{Programming}
+		{Prefer C/C++, Python, Java $\vert$ Vim @ 100\% duty cycle
+			(\HREF{https://github.com/vkottler/dotfiles/blob/master/.vimrc}
+			{.vimrc})}
+		{Parallelism, avoiding race conditions, custom HALs and drivers,
+			web APIs}
+	\SECTCONTNOBRK{Multi-platform build systems, make \&
+		higher-layer abstraction, GDB-style debugging}
+	%
+\end{adjustwidth}}
