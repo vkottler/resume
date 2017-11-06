@@ -1,7 +1,7 @@
 .PHONY: pdf png clean all dvi
 .DEFAULT_GOAL := pdf
 
-PROJECT=CHANGEME
+PROJECT=cover_letter
 
 PDFVIEWER=evince
 DVIVIEWER=xdvi
