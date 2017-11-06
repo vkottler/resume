@@ -1,11 +1,10 @@
 .PHONY: pdf png clean all dvi
 .DEFAULT_GOAL := pdf
 
-PROJECT=main
+PROJECT=CHANGEME
 
-# Platform-specific programs
-PDFVIEWER := evince
-DVIVIEWER := xdvi
+PDFVIEWER=evince
+DVIVIEWER=xdvi
 PNGVIEWER := eog
 RM_CMD := rm -f
 NO_CAP_SHELL := &
@@ -21,21 +20,14 @@ ifeq ($(OS),Windows_NT)
 	DVIVIEWER :=
 endif
 
-subsections += sections/education.tex
-subsections += sections/name.tex
-subsections += sections/work.tex
-subsections += sections/skills_ce.tex
-subsections += sections/skills_cs.tex
-subsections += sections/leadership.tex
-subsections += sections/involvement.tex
-subsections += sections/awards.tex
+subsections =
 
 $(PROJECT).dvi: $(PROJECT).tex $(subsections)
 	+@echo "Generating $@ . . ."
 	@latex $<
 
 dvi: $(PROJECT).dvi
-	@$(DVIVIEWER) $< $(NO_CAP_SHELL)
+	@$(DVIVIEWER) $@ $(NO_CAP_SHELL)
 
 $(PROJECT).png: $(PROJECT).dvi $(subsections)
 	+@echo "Generating $@ . . ."
