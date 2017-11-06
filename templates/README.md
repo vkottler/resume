@@ -6,3 +6,7 @@ documentation tasks.
 ## School Assignment
 
 ![School Assignment](school.png)
+
+## Cover Letter
+
+![School Assignment](cover_letter.png)

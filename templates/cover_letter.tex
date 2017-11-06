@@ -1,22 +1,31 @@
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,12pt]{article}
 
 \usepackage[utf8]{inputenc}			% Boilerplate
+\usepackage[hidelinks]{hyperref}	% Hyperlinks
 \usepackage{fancyhdr}				% Header & Footer
 \usepackage[default]{sourcecodepro}	% Font
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}				% Images
+\usepackage{color}					% Colors
 \addtolength{\topmargin}{-1.0in}	% Margins
-\addtolength{\oddsidemargin}{-1.5in}
-\addtolength{\evensidemargin}{-1.5in}
-\addtolength{\textwidth}{3.0in}
-\addtolength{\textheight}{2.25in}
+\addtolength{\oddsidemargin}{-1in}
+\addtolength{\evensidemargin}{-1in}
+\addtolength{\textwidth}{2.0in}
+\addtolength{\textheight}{2in}
+
+\usepackage[absolute,overlay]{textpos}	% positioning blocks
+\setlength{\TPHorizModule}{1in} 		% horizontal unit
+\setlength{\TPVertModule}{1in} 			% vertical unit
 
 % Metadata
 \title{topicX}
 \author{Vaughn Kottler}
 
 % Custom colors
-%\definecolor{maroon}{RGB}{152, 0, 0}
+\definecolor{maroon}{RGB}{152, 0, 0}
+
+% Link styling: blue and underlined
+\newcommand{\LINK}[1]{{\color{blue}\underline{\url{#1}}}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                               Header and Footer                             %
@@ -25,15 +34,18 @@
 \fancyhf{}
 
 % Top header
-\lhead{LEFT}
-\rhead{\today}
+\lhead{\footnotesize
+    \textbf{Cell:}\ (608) 381-1145 $\vert$
+    \textbf{Email:}\ \LINK{vkottler@wisc.edu}
+}
+\rhead{{\color{maroon}\today}}
 
 % Get rid of header horizontal rule
-%\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\headrulewidth}{0pt}
 
 % Reduce distance between header and text
-\setlength{\headsep}{0.15in}
-\setlength{\footskip}{0.4in}
+\setlength{\headsep}{0.05in}
+\setlength{\footskip}{0.6in}
 
 % Bottom header(s)
 \cfoot{{\centering\noindent\rule{7.75in}{0.5pt}}}
@@ -41,13 +53,15 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
-Dear SpaceX,
+{\centering\noindent\rule{7.75in}{0.5pt}}\break\break
+Dear {\color{maroon}\textbf{COMPANY}},
 
-TODO
+\noindent\break
+Hire me because I am cool.
 
-Thank you very much. I'm looking forward to your feedback,
-
-Vaughn Kottler
-\break
-\includegraphics[width=1.5in,natwidth=315,natheight=148]{signature.png}
+{\begin{textblock}{8}(1,8)\noindent
+Thank you very much. I'm looking forward to your feedback,\break\break
+{\color{maroon}\textbf{Vaughn Kottler}}\break\break\break
+\includegraphics[width=2.5in,natwidth=315,natheight=148]{signature.png}
+\end{textblock}}
 \end{document}

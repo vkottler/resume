@@ -45,4 +45,4 @@ pdf: $(PROJECT).pdf
 
 all: pdf png
 clean:
-	@$(RM_CMD) *.log *.aux *.dvi $(PROJECT).pdf $(PROJECT).png *.out
+	@$(RM_CMD) *.log *.aux *.dvi *.out
