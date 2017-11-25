@@ -1,17 +1,20 @@
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,10pt]{article}
 
 \usepackage[utf8]{inputenc}			% Boilerplate
 \usepackage[default]{sourcecodepro}	% Font
 \usepackage[T1]{fontenc}
 \usepackage[hidelinks]{hyperref}	% Hyperlinks
+\usepackage[document]{ragged2e}		% Left-align text
 \usepackage{color}					% Colors
 \usepackage{lastpage}				% Page Numbering
+\usepackage{setspace}				% Custom line-spacing
+\usepackage{changepage}				% Vertical align blocks
 \usepackage{fancyhdr}				% Header and Footer
-\addtolength{\topmargin}{-0.5in}	% Margins
+\addtolength{\topmargin}{-0.75in}	% Margins
 \addtolength{\oddsidemargin}{-1.0in}
 \addtolength{\evensidemargin}{-1.0in}
 \addtolength{\textwidth}{2.0in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\textheight}{1.5in}
 
 % Metadata
 \title{topicX}
@@ -20,7 +23,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \lhead{
-	\textbf{ECE X SECT - TYPE:} Assignment Name\break\break
+	\textbf{ME 1 001 - TOPIC X:} Topic Name\break\break
 	\textit{
 		{\color{blue}\href{http://vaughnsplayground.me}{Vaughn Kottler}} -
 		Senior CE \& CS - {\color{blue}{\href{http://www.spacex.com/}{SpaceX}}}
@@ -36,26 +39,30 @@
 
 \begin{document}
 
-\section*{\break Question I}
+\section*{\break
+	1.\ Question
+}
 
+\textit{X.\ Sub-section header\break}
+
+\begin{adjustwidth}{0.5in}{0in}\setstretch{1.25}\small
 TODO
+\end{adjustwidth}
 
-\begin{flushleft}
-\textit{\textbf{"Quote."}}
-\end{flushleft}
+\section*{2.\ Question}
 
-\noindent
+\textit{X.\ Sub-section header\break}
+
+\begin{adjustwidth}{0.5in}{0in}\setstretch{1.25}\small
 TODO
+\end{adjustwidth}
 
-\section*{Question II}
+\section*{3.\ Question}
 
+\textit{X.\ Sub-section header\break}
+
+\begin{adjustwidth}{0.5in}{0in}\setstretch{1.25}\small
 TODO
-
-\begin{flushleft}
-\textit{\textbf{"Quote."}}
-\end{flushleft}
-
-\noindent
-TODO
+\end{adjustwidth}
 
 \end{document}
