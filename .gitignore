@@ -3,4 +3,6 @@
 *.log
 *.out
 *.dvi
-
+*.snm
+*.nav
+*.toc
