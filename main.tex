@@ -14,6 +14,7 @@
 \usepackage[hidelinks]{hyperref}	% Hyperlinks
 \usepackage{graphicx}				% Images
 \usepackage{color}					% Colors
+\usepackage{xcolor}					% Colors
 \usepackage{changepage}				% Vertical align blocks
 \usepackage[document]{ragged2e}		% Left-align text
 \usepackage{setspace}				% Custom line-spacing
@@ -37,6 +38,9 @@
 
 % Custom colors
 \definecolor{maroon}{RGB}{152, 0, 0}
+\definecolor{terminal}{HTML}{4CAF50}
+\definecolor{pri-600}{HTML}{546E7A}
+\definecolor{pri-900}{HTML}{263238}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                               Custom commands                               %
@@ -52,8 +56,8 @@
 \newcommand{\HREF}[2]{{\color{blue}\underline{\smash{\href{#1}{#2}}}}}
 
 % Section formatting helpers, removes a lot of boilerplate
-\newcommand{\SECTHEAD}[3][maroon]{{\color{#1}\textbf{#2:}}\ \textit{#3}}
-\newcommand{\ALTHEAD}[3]{\textbf{#1} (#2) \textit{#3}}
+\newcommand{\SECTHEAD}[3][pri-900]{{\color{#1}\textbf{#2:}}\ \textit{#3}}
+\newcommand{\ALTHEAD}[3]{\color{pri-900}{\textbf{#1}} (#2) \textit{#3}}
 
 \newcommand{\SECTCONTNOBRK}[1]{{\small - #1}}
 \newcommand{\SECTCONT}[1]{\SECTCONTNOBRK{#1}\break}
@@ -80,7 +84,7 @@
 \chead{\footnotesize
     \textbf{Cell:}\ (608) 381-1145 $\vert$
     \textbf{Email:}\ \LINK{vkottler@wisc.edu} $\vert$
-    \textbf{Website:}\ \LINK{vdoer.tech} $\vert$
+    \textbf{Website:}\ \LINK{vkottler.github.io} $\vert$
     \textbf{GitHub:}\ \LINK{www.github.com/vkottler}
 }
 
@@ -94,7 +98,7 @@
 % Bottom header(s)
 \rfoot{\footnotesize
     Made \HREF{https://github.com/vkottler/resume}{from scratch}
-	with {\color{maroon}\LaTeX{}} (\textit{\today})
+	with {\color{pri-900}\LaTeX{}} (\textit{\today})
 }
 \lfoot{\footnotesize
     \textbf{YouTube tutorials:}\ \LINK{https://www.youtube.com/user/VEVOemployee}
@@ -118,7 +122,7 @@
 \HR
 %
 \begin{textblock}{1.25}(6.5,9.2)
-\includegraphics[width=1.25in,natwidth=100,natheight=100]{im/logo_500.png}
+\includegraphics[width=1.25in,natwidth=100,natheight=100]{im/logo_circular_510.png}
 \end{textblock}
 \subfile{sections/involvement}\noindent
 \subfile{sections/awards}
