@@ -26,6 +26,7 @@ subsections += sections/name.tex
 subsections += sections/work.tex
 subsections += sections/skills_ce.tex
 subsections += sections/skills_cs.tex
+subsections += sections/certificates.tex
 subsections += sections/leadership.tex
 subsections += sections/involvement.tex
 subsections += sections/awards.tex
