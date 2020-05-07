@@ -7,6 +7,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}				% Images
 \usepackage{color}					% Colors
+\usepackage{xcolor}					% Colors
 \addtolength{\topmargin}{-1.0in}	% Margins
 \addtolength{\oddsidemargin}{-1in}
 \addtolength{\evensidemargin}{-1in}
@@ -23,6 +24,7 @@
 
 % Custom colors
 \definecolor{maroon}{RGB}{152, 0, 0}
+\definecolor{pri-600}{HTML}{546E7A}
 
 % Link styling: blue and underlined
 \newcommand{\LINK}[1]{{\color{blue}\underline{\url{#1}}}}
@@ -36,9 +38,9 @@
 % Top header
 \lhead{\footnotesize
     \textbf{Cell:}\ (608) 381-1145 $\vert$
-    \textbf{Email:}\ \LINK{vkottler@wisc.edu}
+    \textbf{Email:}\ \LINK{vaughnkottler@gmail.com}
 }
-\rhead{{\color{maroon}\today}}
+\rhead{{\color{pri-600}\today}}
 
 % Get rid of header horizontal rule
 \renewcommand{\headrulewidth}{0pt}
@@ -52,16 +54,43 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% fix bad hypenation defaults
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
 \begin{document}
 {\centering\noindent\rule{7.75in}{0.5pt}}\break\break
-Dear {\color{maroon}\textbf{COMPANY}},
+Dear {\color{pri-600}\textbf{SpaceX}},
 
 \noindent\break
-Hire me because I am cool.
+I am currently a Firmware Engineer working in the autonomous robotics /
+warehouse automation problem domain.
+
+\noindent\break
+Electronic/programmable systems that directly interface with humans have
+practical safety considerations, as a result I have gained experience in
+developing embedded software that complies with industrial standards at
+a negotiated integrity level.
+
+\noindent\break
+My experience as an intern at SpaceX familiarized me with problem-domain
+invariant attributes of a workflow that is viable for real-time,
+safety-critical systems' development.
+
+\noindent\break
+As an engineer contributing new assets to an existing ecosystem, I find myself
+motivated to improve the efficiency of my workflow. As a result I have
+championed build system improvements and custom in-circuit debugging tooling
+to meet the demand of a real-time embedded system that increases in complexity
+as it scales.
 
 {\begin{textblock}{8}(1,8)\noindent
 Thank you very much. I'm looking forward to your feedback,\break\break
-{\color{maroon}\textbf{Vaughn Kottler}}\break\break\break
+{\color{pri-600}\textbf{Vaughn Kottler}}\break\break\break
 \includegraphics[width=2.5in,natwidth=315,natheight=148]{signature.png}
+\hspace{1.75in}
+\includegraphics[width=1.5in,natwidth=100,natheight=100]{../im/logo_circular_510.png}
 \end{textblock}}
 \end{document}
